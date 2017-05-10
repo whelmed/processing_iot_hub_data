@@ -1,0 +1,29 @@
+WITH source AS (
+    SELECT DeviceId, [Index], [Data], [DateTime]
+    FROM events TIMESTAMP BY [DateTime]
+),
+windowing AS (
+    SELECT DeviceId, System.Timestamp AS t, AVG([Data]) AS Average, COUNT(*) AS Counting,Min([Index]) as [From], Max([Index]) AS [To]
+    FROM source
+    GROUP BY DeviceId, HoppingWindow(second, 10, 5)
+),
+commands AS (
+    SELECT 'SWITCH-ON' AS Command, DeviceId, t, Average, Counting
+    FROM windowing
+    WHERE Average > 24 AND Counting >= 6
+    UNION
+    SELECT '' AS Command, DeviceId, t, Average, Counting
+    FROM windowing
+)
+SELECT
+    DeviceId, [Index], [Data], [DateTime]
+INTO
+    logging
+FROM
+    source
+SELECT 
+    Command, DeviceId, t, Average, Counting
+INTO 
+    feedback
+FROM 
+    commands

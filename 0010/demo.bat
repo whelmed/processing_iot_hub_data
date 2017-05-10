@@ -1,0 +1,4 @@
+start bin\IotHubDeviceClient.exe telemetry -connectionStringHostName=processingioteventsanddata.azure-devices.net;DeviceId=dev1;SharedAccessKey=9KVV6VLR7N/ccAi9J/w4p3pAao+YkdPTffORki65Ys4= -deviceIddev1 -eventCount%2 -initialValue%1
+start bin\IotHubDeviceClient.exe telemetry -connectionStringHostName=processingioteventsanddata.azure-devices.net;DeviceId=dev2;SharedAccessKey=Pn9c5hMiE62mHSzbgIXlM/lm8oVAY7EFUTpsW5M3EcI= -deviceIddev2 -eventCount%2 -initialValue%1
+start bin\IotHubDeviceClient.exe telemetry -connectionStringHostName=processingioteventsanddata.azure-devices.net;DeviceId=dev3;SharedAccessKey=6SXjoqzIJHqe91wrMkV28TBzT0Vtdw5fXzO2Ey6aKSQ= -deviceIddev3 -eventCount%2 -initialValue%1
+start bin\IotHubDeviceClient.exe telemetry -connectionStringHostName=processingioteventsanddata.azure-devices.net;DeviceId=dev4;SharedAccessKey=ac692zKsuLtxSrP+m+W/B9GfwoCH/bayYpMc3r+Xj4w= -deviceIddev4 -eventCount%2 -initialValue%1

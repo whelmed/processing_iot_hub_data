@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>logging -connectionStringEndpoint=sb://iothub-ns-processiot-154621-cf7804e95a.servicebus.windows.net/%3bSharedAccessKeyName=processor%3bSharedAccessKey=vTzKFCyuYTUwJYoP/dC2ak/DMRn75Hu22MaqIiA2CxI= -pathprocessiot -consumerGroupNameprocessor -documentdbConnectionStringAccountEndpoint=https://processiot.documents.azure.com:443/%3bAccountKey=WHNukAMLfcDFIX6SyTuqyOwJJtdvKOdqu3SG57Be3Q2BFLrhPLcP8tpEfCtYG7H4lYcJkBhHygYewUkd3LB3Dw==%3b</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,17 @@
+WITH source AS (
+    SELECT DeviceId, Index, Data, Date
+    FROM events TIMESTAMP BY Date
+),
+grouped AS (
+    SELECT DeviceId, System.Timestamp t, AVG(Data) AS AvgH, COUNT(*) AS CountH
+    FROM
+        filtered
+    GROUP BY DeviceId, HoppingWindow(second, 10, 5)
+)
+SELECT DeviceId, Index, Data, Date
+INTO logs
+FROM source
+SELECT 'ON' AS Command, DeviceId, t, AvgH
+INTO feedback
+FROM grouped
+WHERE AvgH > 24 AND CountH > 8

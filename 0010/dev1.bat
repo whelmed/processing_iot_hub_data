@@ -1,0 +1,1 @@
+bin\IoTHubDeviceClient.exe telemetry -connectionStringHostName=processiot.azure-devices.net;DeviceId=dev1;SharedAccessKey=NNE/DuQF0pIvlmcqs2a86jQOc/NypXUTNnkmzI/Q4TI= -deviceIddev1

@@ -1,0 +1,32 @@
+//
+// ioT HUb
+//
+
+// DEVICE SIMULATOR
+// dev1
+// Connection String
+HostName=processiot.azure-devices.net;DeviceId=dev1;SharedAccessKey=NNE/DuQF0pIvlmcqs2a86jQOc/NypXUTNnkmzI/Q4TI=
+
+
+// IoT Hub
+// events endpoint
+Consumer Group=processor
+Path=processiot
+HostName=processiot.azure-devices.net;SharedAccessKeyName=processor;SharedAccessKey=vTzKFCyuYTUwJYoP/dC2ak/DMRn75Hu22MaqIiA2CxI=
+
+// Event Hub Compatible Endpoint
+Endpoint=sb://iothub-ns-processiot-154621-cf7804e95a.servicebus.windows.net/;SharedAccessKeyName=processor;SharedAccessKey=vTzKFCyuYTUwJYoP/dC2ak/DMRn75Hu22MaqIiA2CxI=
+
+
+
+
+//
+// eventHub
+//
+
+//processor
+Endpoint=sb://processiot.servicebus.windows.net/;SharedAccessKeyName=processor;SharedAccessKey=yNlERZDBynM40wyhub8ILSlGS/XsKAXBk1o273Qm8ns=;EntityPath=feedback
+
+// feedback
+Consumer group=feedback
+Endpoint=sb://processiot.servicebus.windows.net/;SharedAccessKeyName=feedback;SharedAccessKey=nYme6mRtzedAUCcrYOWH74v+okj6bP02jpzfNiMnzzA=;EntityPath=feedback

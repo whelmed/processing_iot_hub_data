@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "myEventHubMessage",
+      "direction": "in",
+      "path": "processiot",
+      "connection": "processiot"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "demo",
+      "collectionName": "events",
+      "createIfNotExists": false,
+      "connection": "processiot_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": true
+}

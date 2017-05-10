@@ -1,0 +1,14 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "myEventHubMessage",
+      "direction": "in",
+      "path": "feedback",
+      "connection": "feedback",
+      "consumerGroup": "feedback",
+      "cardinality": "one"
+    }
+  ],
+  "disabled": false
+}

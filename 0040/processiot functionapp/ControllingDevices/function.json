@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "myEventHubMessage",
+      "direction": "in",
+      "path": "processiot",
+      "connection": "processiot",
+      "consumerGroup": "$Default",
+      "cardinality": "many"
+    },
+    {
+      "type": "eventHub",
+      "name": "outputEventHubMessage",
+      "path": "feedback",
+      "connection": "feedback",
+      "direction": "out"
+    }
+  ],
+  "disabled": true
+}
